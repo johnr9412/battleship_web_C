@@ -5,25 +5,27 @@
 }
 
 <style>
-    #grid-line {
+    #game-board {
         display: grid;
         grid-template-columns: auto auto auto auto auto auto auto auto auto auto; /* 10 COL LAYOUT */
         grid-gap: 5px;
     }
 
-    div.labelCell {
+    div.label-cell {
         padding: 5px;
         text-align: center
     }
 
-    div.playCell {
-        border: 1px solid #aaa;
+    div.board-cell-container {
         padding: 5px;
+        text-align: center;
     }
 
-    .boardCell{
-        display:table-cell;
-        width:100%;
+    .board-cell {
+        display: table-cell;
+        width: 2ch;
+        text-align: center;
+        border: 1px solid #aaa;
     }
 
     /* (B) SPAN MULTIPLE ROWS */
@@ -46,40 +48,68 @@
 </div>
 <!--Battleship board-->
 
-<div id="grid-line">
-    <div class="labelCell">1</div>
-    <div class="labelCell">2</div>
-    <div class="labelCell">3</div>
-    <div class="labelCell">4</div>
-    <div class="labelCell">5</div>
-    <div class="labelCell">6</div>
-    <div class="labelCell">7</div>
-    <div class="labelCell">8</div>
-    <div class="labelCell">9</div>
-    <div class="labelCell">10</div>
-    <div class="playCell">
-        <input type="text" class="boardCell" id="test">
+<div id="game-board">
+    <div class="label-cell">1</div>
+    <div class="label-cell">2</div>
+    <div class="label-cell">3</div>
+    <div class="label-cell">4</div>
+    <div class="label-cell">5</div>
+    <div class="label-cell">6</div>
+    <div class="label-cell">7</div>
+    <div class="label-cell">8</div>
+    <div class="label-cell">9</div>
+    <div class="label-cell">10</div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
     </div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
-    <div class="playCell">Cell</div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
+    <div class="board-cell-container">
+        <input type="text" class="board-cell" id="test">
+    </div>
 </div>
 <br />
 <input class="btn btn-primary" type="button" value="Setup Complete" id="submitButton">
 
 <script type="text/javascript">
     $(document).ready(function () {
-        alert("ready!");
+        //alert("ready!");
     });
 </script>
