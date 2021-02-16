@@ -4,9 +4,82 @@
 @{
 }
 
+<style>
+    #grid-line {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto; /* 10 COL LAYOUT */
+        grid-gap: 5px;
+    }
+
+    div.labelCell {
+        padding: 5px;
+        text-align: center
+    }
+
+    div.playCell {
+        border: 1px solid #aaa;
+        padding: 5px;
+    }
+
+    .boardCell{
+        display:table-cell;
+        width:100%;
+    }
+
+    /* (B) SPAN MULTIPLE ROWS */
+    .spanrow {
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+</style>
+
 <div class="text-center">
     <h1 class="display-4">Welcome to PVP Battleship</h1>
-    <br />
-    <p>Click to begin a @Html.ActionLink("game against another local player", "Index", "LocalPVP").</p>
-    <p>Click to begin a <a href="https://docs.microsoft.com/aspnet/core">game against an online player</a>.</p>
+    <h2 id="setupBanner">Setup for player 1</h2>
 </div>
+<br />
+<div class="form-group row">
+    <label id="playerNameLabel" for="player1Name">Enter the Player's Name</label>
+    <div class="col-sm-2">
+        <input type="text" class="form-control" id="playerName" placeholder="Player Name">
+    </div>
+</div>
+<!--Battleship board-->
+
+<div id="grid-line">
+    <div class="labelCell">1</div>
+    <div class="labelCell">2</div>
+    <div class="labelCell">3</div>
+    <div class="labelCell">4</div>
+    <div class="labelCell">5</div>
+    <div class="labelCell">6</div>
+    <div class="labelCell">7</div>
+    <div class="labelCell">8</div>
+    <div class="labelCell">9</div>
+    <div class="labelCell">10</div>
+    <div class="playCell">
+        <input type="text" class="boardCell" id="test">
+    </div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+    <div class="playCell">Cell</div>
+</div>
+<br />
+<input class="btn btn-primary" type="button" value="Setup Complete" id="submitButton">
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        alert("ready!");
+    });
+</script>
